@@ -1,4 +1,6 @@
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
+import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
+import br.com.alura.screenmatch.modelos.Epsodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
@@ -37,5 +39,15 @@ public class Main {
         calc.inclui(outroFilme);
         calc.inclui(lost);
         System.out.println("Tempo total para assistir: " + calc.getTempoTotal());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(meuFilme);
+        Epsodio epsodio =  new Epsodio();
+        epsodio.setNome("Inicio");
+        epsodio.setNumero(1);
+        epsodio.setSerie(lost);
+        epsodio.setTotalDeVizualizacoes(300);
+
+        filtro.filtra(epsodio);
     }
 }
