@@ -3,6 +3,9 @@ import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Epsodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
+import br.com.alura.screenmatch.modelos.Titulo;
+
+import java.util.ArrayList;
 
 public class Main {
     static void main() {
@@ -49,5 +52,21 @@ public class Main {
         epsodio.setTotalDeVizualizacoes(300);
 
         filtro.filtra(epsodio);
+
+        Filme filme2 = new Filme();
+        filme2.setNome("Dogville");
+        filme2.setAnoDeLancamento(2003);
+        filme2.setDuracaoEmMinutos(200);
+        filme2.avalia(10);
+
+        ArrayList<Titulo> titulos = new ArrayList<Titulo>();
+        titulos.add(meuFilme);
+        titulos.add(outroFilme);
+        titulos.add(filme2);
+        titulos.add(lost);
+
+        System.out.println("Total de titulos: " + titulos.size());
+        System.out.println("Primeiro Filme: " + titulos.get(0).getNome());
+
     }
 }
