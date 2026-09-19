@@ -9,8 +9,7 @@ import java.util.ArrayList;
 
 public class Main {
     static void main() {
-        Filme meuFilme = new Filme("O poderoso chefão");
-        meuFilme.setAnoDeLancamento(1970);
+        Filme meuFilme = new Filme("O poderoso chefão", 1970);
         meuFilme.setDuracaoEmMinutos(180);
 
 
@@ -22,16 +21,14 @@ public class Main {
         System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
         System.out.println("Média: " + meuFilme.pegaMedia());
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("Lost", 2000);
         lost.setTemporadas(10);
         lost.setEpsodiosPorTemporada(10);
         lost.setMinutosPorEpsodio(50);
 
         System.out.println("Duração de " + lost.getNome() + ": " + lost.getDuracaoEmMinutos() + " minutos");
 
-        Filme outroFilme = new Filme("Avatar");
+        Filme outroFilme = new Filme("Avatar", 2023);
         outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoEmMinutos(200);
 
@@ -51,7 +48,7 @@ public class Main {
 
         filtro.filtra(epsodio);
 
-        Filme filme2 = new Filme("Dogville");
+        Filme filme2 = new Filme("Dogville", 2003);
         filme2.setAnoDeLancamento(2003);
         filme2.setDuracaoEmMinutos(200);
         filme2.avalia(10);
