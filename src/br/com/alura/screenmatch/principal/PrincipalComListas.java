@@ -20,7 +20,11 @@ public class PrincipalComListas {
         titulos.add(lost);
 
         for(Titulo titulo : titulos) {
-            System.out.println(titulo);
+            System.out.println(titulo.getNome());
+            if (titulo instanceof Filme filme) {
+                System.out.println("Classificação " + filme.getClassificacao());
+            }
+
         }
     }
 }
