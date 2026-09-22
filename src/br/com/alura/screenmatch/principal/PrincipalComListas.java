@@ -5,6 +5,7 @@ import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PrincipalComListas {
     static void main() {
@@ -18,6 +19,9 @@ public class PrincipalComListas {
         titulos.add(outroFilme);
         titulos.add(filme2);
         titulos.add(lost);
+        meuFilme.avalia(10);
+        outroFilme.avalia(8);
+        filme2.avalia(10);
 
         for(Titulo titulo : titulos) {
             System.out.println(titulo.getNome());
@@ -26,5 +30,17 @@ public class PrincipalComListas {
             }
 
         }
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Adam Sandler");
+        buscaPorArtista.add("Brad Pitt");
+        buscaPorArtista.add("Tom Holand");
+        System.out.println(buscaPorArtista);
+
+        Collections.sort(buscaPorArtista);
+        System.out.println("Artistas em ordem alfabetica");
+
+        Collections.sort(titulos);
+        System.out.println("Titulos em ordem alfabetica");
+        System.out.println(titulos);
     }
 }
