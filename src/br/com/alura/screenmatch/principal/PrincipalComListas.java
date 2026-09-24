@@ -7,6 +7,7 @@ import br.com.alura.screenmatch.modelos.Titulo;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 public class PrincipalComListas {
     static void main() {
@@ -15,7 +16,7 @@ public class PrincipalComListas {
         Filme filme2 = new Filme("Dogville", 2003);
         Serie lost = new Serie("Lost", 2000);
 
-        ArrayList<Titulo> titulos = new ArrayList<Titulo>();
+        List<Titulo> titulos = new ArrayList<Titulo>();
         titulos.add(meuFilme);
         titulos.add(outroFilme);
         titulos.add(filme2);
