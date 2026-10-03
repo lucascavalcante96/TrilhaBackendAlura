@@ -1,16 +1,16 @@
 package br.com.alura.screenmatch.Exercicios.Compras;
 
 public class Compra implements Comparable<Compra> {
-    private String descricao;
+    private String descricaoProduto;
     private double valor;
 
     public Compra(String descricao, double valor) {
-        this.descricao = descricao;
+        this.descricaoProduto = descricao;
         this.valor = valor;
     }
 
     public String getDescricao() {
-        return descricao;
+        return descricaoProduto;
     }
 
     public double getValor() {
@@ -19,7 +19,7 @@ public class Compra implements Comparable<Compra> {
 
     @Override
     public String toString() {
-        return "Compra: descricao = " + descricao +
+        return "Compra: descricao = " + descricaoProduto +
                 " valor =" + valor;
     }
 
