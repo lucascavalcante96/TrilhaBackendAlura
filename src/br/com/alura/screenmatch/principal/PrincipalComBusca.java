@@ -61,9 +61,10 @@ public class PrincipalComBusca {
             }
 
             System.out.println(titulos);
-            FileWriter escrita = new FileWriter("listaDeFilmes.txt", true);
-            escrita.write(titulos.toString());
-            escrita.close();
+
         }
+        FileWriter escrita = new FileWriter("ListaDeTitulos.txt", true);
+        escrita.write(titulos.toString());
+        escrita.close();
     }
 }
