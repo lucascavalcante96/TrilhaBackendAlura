@@ -24,6 +24,7 @@ public class PrincipalComBusca {
 
         var busca = " ";
         List<Titulo> titulos = new ArrayList<>();
+        Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).setPrettyPrinting().create();
 
         while (!busca.equals("sair")) {
             System.out.println("Digite um filme para busca: ");
@@ -41,7 +42,7 @@ public class PrincipalComBusca {
                 String json = response.body();
                 System.out.println(json);
 
-                Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
+
 
                 TituloOmdb meuFilmeOmdb = gson.fromJson(json, TituloOmdb.class);
                 System.out.println(meuFilmeOmdb);
@@ -63,8 +64,8 @@ public class PrincipalComBusca {
             System.out.println(titulos);
 
         }
-        FileWriter escrita = new FileWriter("ListaDeTitulos.txt", true);
-        escrita.write(titulos.toString());
+        FileWriter escrita = new FileWriter("ListaDeTitulos.json", true);
+        escrita.write(gson.toJson(titulos));
         escrita.close();
     }
 }

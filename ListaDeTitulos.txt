@@ -1,1 +1,0 @@
-[( nome= Dogville, anoDeLancamento= 2004, duração 171 min) , ( nome= Matrix, anoDeLancamento= 1993, duração 60 min) , ( nome= The Avengers, anoDeLancamento= 2012, duração 143 min) ]
