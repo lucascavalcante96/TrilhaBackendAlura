@@ -39,7 +39,7 @@ public class PrincipalComBusca {
             System.out.println("Titulo já convertido");
             System.out.println(meuFilme);
 
-            FileWriter escrita = new FileWriter("filmes.txt", true);
+            FileWriter escrita = new FileWriter("listaDeFilmes.txt", true);
             escrita.write(meuFilme.toString());
             escrita.close();
         } catch (NumberFormatException e){
